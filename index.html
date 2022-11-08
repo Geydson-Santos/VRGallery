@@ -65,10 +65,25 @@
             <a-camera>
               <a-cursor
                 id="cursor"
+                material="color: cyan; shader: flat"
                 animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
-                animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
+
                 animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing"></a-cursor>
             </a-camera>
           </a-scene>
+
+          <!-- <a-entity position="0 2.2 4">
+            <a-entity camera look-controls wasd-controls>
+              <a-entity position="0 0 -3"
+                        geometry="primitive: ring; radiusInner: 0.25; radiusOuter: 0.28;"
+                        material="color: cyan; shader: flat"
+                        cursor="maxDistance: 30; fuse: true">
+                <a-animation begin="click" easing="ease-in" attribute="scale"
+                     fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                     fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+              </a-entity>
+            </a-entity>
+          </a-entity> -->
     </body>
 </html>
